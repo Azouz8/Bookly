@@ -1,3 +1,4 @@
+import 'package:booklyy/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +13,10 @@ class Bookly extends StatelessWidget {
 
   @override
   Widget build(BuildContext context)  {
-    return const GetMaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData().copyWith(
+        scaffoldBackgroundColor: kPrimaryColor,),
       home: SplashView(),
     );
   }
