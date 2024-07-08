@@ -10,14 +10,15 @@ class FeaturedListViewBookItem extends StatelessWidget {
       aspectRatio: 1.5 / 2.7,
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.white,
-            image: const DecorationImage(
-              image: AssetImage(
-                AssetsData.testImage,
-              ),
-              fit: BoxFit.fill,
-            )),
+          borderRadius: BorderRadius.circular(16),
+          color: Colors.white,
+          image: const DecorationImage(
+            image: AssetImage(
+              AssetsData.testImage,
+            ),
+            fit: BoxFit.fill,
+          ),
+        ),
       ),
     );
   }
