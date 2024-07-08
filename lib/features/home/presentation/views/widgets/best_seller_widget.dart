@@ -1,3 +1,4 @@
+import 'package:booklyy/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerWidget extends StatelessWidget {
@@ -5,6 +6,14 @@ class BestSellerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Padding(
+      padding: EdgeInsets.only(top: 50),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Best Seller" ,style: Styles.titleMedium),
+        ],
+      ),
+    );
   }
 }
