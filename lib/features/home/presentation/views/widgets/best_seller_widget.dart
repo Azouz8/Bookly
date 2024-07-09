@@ -1,10 +1,8 @@
-import 'package:booklyy/core/utils/assets.dart';
-import 'package:booklyy/core/utils/constants.dart';
 import 'package:booklyy/core/utils/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'best_seller_list_view.dart';
 import 'best_seller_list_view_item.dart';
 
 class BestSellerWidget extends StatelessWidget {
@@ -13,7 +11,7 @@ class BestSellerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(top: 50),
+      padding: EdgeInsets.only(top: 50 , left: 24,right: 24),
       child: Column(
         children: [
           Row(
@@ -25,10 +23,8 @@ class BestSellerWidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
-            height: 16,
-          ),
-          BestSellerListViewItem(),
+          SizedBox(height: 16,),
+          BestSellerListView(),
         ],
       ),
     );
