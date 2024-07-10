@@ -1,11 +1,9 @@
 import 'package:booklyy/core/utils/app_router.dart';
 import 'package:booklyy/core/utils/assets.dart';
-import 'package:booklyy/features/home/presentation/views/home_view.dart';
 import 'package:booklyy/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/constants.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

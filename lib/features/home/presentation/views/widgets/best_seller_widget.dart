@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'best_seller_list_view.dart';
-import 'best_seller_list_view_item.dart';
 
 class BestSellerWidget extends StatelessWidget {
   const BestSellerWidget({super.key});

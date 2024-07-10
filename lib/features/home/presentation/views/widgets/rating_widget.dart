@@ -9,20 +9,24 @@ class RatingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Icon(
+        Icon(
           FontAwesomeIcons.solidStar,
           color: Color(0xfff9e253),
+          size: 18,
         ),
-        const Text(
+        Text(
           "  4.8  ",
           style: Styles.textStyle16Bold,
         ),
-        Text(
-          "(2390)",
-          style: Styles.textStyle14Normal
-              .copyWith(color: const Color(0xffb6b5bb)),
+        Opacity(
+          opacity: 0.5,
+          child: Text(
+            "(2390)",
+            style: Styles.textStyle14SemiBold,
+          ),
         ),
       ],
     );
