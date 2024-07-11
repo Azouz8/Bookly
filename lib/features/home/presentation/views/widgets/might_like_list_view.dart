@@ -9,11 +9,11 @@ class MightLikeListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(left: 24),
-      height: 170,
+      height: 150,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => const Padding(
-          padding: EdgeInsets.only(right: 8),
+          padding: EdgeInsets.only(right: 10),
           child: MightLikeListViewItem(),
         ),
         itemCount: 10,

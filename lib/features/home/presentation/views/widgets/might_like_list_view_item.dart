@@ -6,20 +6,17 @@ class MightLikeListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 170,
-      child: AspectRatio(
-        aspectRatio: 1.5 / 2.3,
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.white,
-            image: const DecorationImage(
-              image: AssetImage(
-                AssetsData.testImage,
-              ),
-              fit: BoxFit.fill,
+    return AspectRatio(
+      aspectRatio: 1.3 / 2.2,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          color: Colors.white,
+          image: const DecorationImage(
+            image: AssetImage(
+              AssetsData.testImage,
             ),
+            fit: BoxFit.fill,
           ),
         ),
       ),
