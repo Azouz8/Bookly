@@ -1,4 +1,4 @@
-import 'package:booklyy/core/utils/styles.dart';
+import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import 'might_like_list_view.dart';

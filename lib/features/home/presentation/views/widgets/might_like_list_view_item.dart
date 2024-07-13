@@ -1,4 +1,4 @@
-import 'package:booklyy/core/utils/assets.dart';
+import 'package:bookly/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class MightLikeListViewItem extends StatelessWidget {

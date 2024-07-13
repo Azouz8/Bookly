@@ -1,6 +1,5 @@
-import 'package:booklyy/core/utils/assets.dart';
-import 'package:booklyy/core/utils/styles.dart';
-import 'package:booklyy/features/home/presentation/views/widgets/rating_widget.dart';
+import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/features/home/presentation/views/widgets/rating_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'book_details_preview_button.dart';
