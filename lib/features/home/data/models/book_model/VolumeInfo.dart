@@ -1,7 +1,7 @@
-import 'IndustryIdentifiers.dart';
-import 'ReadingModes.dart';
-import 'PanelizationSummary.dart';
 import 'ImageLinks.dart';
+import 'IndustryIdentifiers.dart';
+import 'PanelizationSummary.dart';
+import 'ReadingModes.dart';
 
 class VolumeInfo {
   VolumeInfo({
