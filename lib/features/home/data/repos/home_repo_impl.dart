@@ -11,24 +11,33 @@ class HomeRepoImpl implements HomeRepo {
 
   @override
   Future<Either<Failures, List<BookModel>>> fetchNewestBooks() async {
-    try{
+    try {
       var data = await apiService.get(
           endPoint:
-          "volumes?q=subject:Programming&Filtering=free-ebooks&Sorting:newest");
-      List<BookModel> books =[];
-      for(var i in data["items"]){
+              "volumes?q=subject:Programming&Filtering=free-ebooks&Sorting:newest");
+      List<BookModel> books = [];
+      for (var i in data["items"]) {
         books.add(i);
       }
       return right(books);
-    }on Exception catch(e){
+    } on Exception catch (e) {
       return left(ServerFailure());
     }
-
   }
 
   @override
-  Future<Either<Failures, List<BookModel>>> fetchFeaturedBooks() {
-    // TODO: implement fetchFeaturedBooks
-    throw UnimplementedError();
+  Future<Either<Failures, List<BookModel>>> fetchFeaturedBooks() async{
+    try {
+      var data = await apiService.get(
+          endPoint:
+          "volumes?q=subject:Programming&Filtering=free-ebooks");
+      List<BookModel> books = [];
+      for (var i in data["items"]) {
+        books.add(i);
+      }
+      return right(books);
+    } on Exception catch (e) {
+      return left(ServerFailure());
+    }
   }
 }
