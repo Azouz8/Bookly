@@ -12,8 +12,8 @@ class FeaturedBooksSuccess extends FeaturedBooksState {
   FeaturedBooksSuccess(this.books);
 }
 
-class FeaturedBooksFail extends FeaturedBooksState {
+class FeaturedBooksFailure extends FeaturedBooksState {
   String e;
 
-  FeaturedBooksFail(this.e) {}
+  FeaturedBooksFailure(this.e) {}
 }
