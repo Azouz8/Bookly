@@ -13,7 +13,7 @@ class FeaturedBooksSuccess extends FeaturedBooksState {
 }
 
 class FeaturedBooksFailure extends FeaturedBooksState {
-  String e;
+  String errMessage;
 
-  FeaturedBooksFailure(this.e) {}
+  FeaturedBooksFailure(this.errMessage) {}
 }

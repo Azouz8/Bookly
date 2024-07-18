@@ -18,7 +18,7 @@ class VolumeInfo {
       bool? allowAnonLogging, 
       String? contentVersion, 
       PanelizationSummary? panelizationSummary, 
-      ImageLinks? imageLinks, 
+      required ImageLinks imageLinks,
       String? language, 
       String? previewLink, 
       String? infoLink, 

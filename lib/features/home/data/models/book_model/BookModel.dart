@@ -9,7 +9,7 @@ class BookModel {
       String? id, 
       String? etag, 
       String? selfLink, 
-      VolumeInfo? volumeInfo, 
+      required VolumeInfo volumeInfo,
       SaleInfo? saleInfo, 
       AccessInfo? accessInfo, 
       SearchInfo? searchInfo,}){
