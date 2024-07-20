@@ -20,7 +20,7 @@ class HomeRepoImpl implements HomeRepo {
         books.add(BookModel.fromJson(i));
       }
       return right(books);
-    } on Exception catch (e) {
+    } on Exception {
       return left(ServerFailure());
     }
   }
@@ -36,7 +36,7 @@ class HomeRepoImpl implements HomeRepo {
         books.add(BookModel.fromJson(i));
       }
       return right(books);
-    } on Exception catch (e) {
+    } on Exception {
       return left(ServerFailure());
     }
   }

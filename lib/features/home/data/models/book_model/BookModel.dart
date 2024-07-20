@@ -1,7 +1,6 @@
 import 'SaleInfo.dart';
-import 'SearchInfo.dart';
-import 'VolumeInfo.dart';
 import 'AccessInfo.dart';
+import 'VolumeInfo.dart';
 
 class BookModel {
   BookModel({
@@ -11,8 +10,7 @@ class BookModel {
       String? selfLink, 
       required VolumeInfo volumeInfo,
       SaleInfo? saleInfo, 
-      AccessInfo? accessInfo, 
-      SearchInfo? searchInfo,}){
+      AccessInfo? accessInfo,}){
     _kind = kind;
     _id = id;
     _etag = etag;
@@ -20,7 +18,6 @@ class BookModel {
     _volumeInfo = volumeInfo;
     _saleInfo = saleInfo;
     _accessInfo = accessInfo;
-    _searchInfo = searchInfo;
 }
 
   BookModel.fromJson(dynamic json) {
@@ -31,7 +28,6 @@ class BookModel {
     _volumeInfo = json['volumeInfo'] != null ? VolumeInfo.fromJson(json['volumeInfo']) : null;
     _saleInfo = json['saleInfo'] != null ? SaleInfo.fromJson(json['saleInfo']) : null;
     _accessInfo = json['accessInfo'] != null ? AccessInfo.fromJson(json['accessInfo']) : null;
-    _searchInfo = json['searchInfo'] != null ? SearchInfo.fromJson(json['searchInfo']) : null;
   }
   String? _kind;
   String? _id;
@@ -40,16 +36,14 @@ class BookModel {
   VolumeInfo? _volumeInfo;
   SaleInfo? _saleInfo;
   AccessInfo? _accessInfo;
-  SearchInfo? _searchInfo;
 
   String? get kind => _kind;
   String? get id => _id;
   String? get etag => _etag;
   String? get selfLink => _selfLink;
-  VolumeInfo? get volumeInfo => _volumeInfo;
+  VolumeInfo get volumeInfo => _volumeInfo!;
   SaleInfo? get saleInfo => _saleInfo;
   AccessInfo? get accessInfo => _accessInfo;
-  SearchInfo? get searchInfo => _searchInfo;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -65,9 +59,6 @@ class BookModel {
     }
     if (_accessInfo != null) {
       map['accessInfo'] = _accessInfo?.toJson();
-    }
-    if (_searchInfo != null) {
-      map['searchInfo'] = _searchInfo?.toJson();
     }
     return map;
   }

@@ -1,4 +1,3 @@
-import 'package:bookly/features/home/presentation/views/widgets/best_seller_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'custom_search_text_field.dart';
 
@@ -41,7 +40,8 @@ class SearchResultListView extends StatelessWidget {
       child: ListView.builder(
         padding: EdgeInsets.zero,
         shrinkWrap: true,
-        itemBuilder: (context, index) => const BookListViewItem(),
+        // itemBuilder: (context, index) => BookListViewItem(),
+        itemBuilder: (context, index) => Container(),
         itemCount: 10,
         physics: const BouncingScrollPhysics(),
       ),

@@ -1,3 +1,4 @@
+
 import 'ImageLinks.dart';
 import 'IndustryIdentifiers.dart';
 import 'PanelizationSummary.dart';
@@ -7,13 +8,16 @@ class VolumeInfo {
   VolumeInfo({
       String? title, 
       List<String>? authors, 
+      String? publisher, 
       String? publishedDate, 
       String? description, 
       List<IndustryIdentifiers>? industryIdentifiers, 
       ReadingModes? readingModes, 
-      num? pageCount, 
+      int? pageCount, 
       String? printType, 
       List<String>? categories, 
+      int? averageRating, 
+      int? ratingsCount, 
       String? maturityRating, 
       bool? allowAnonLogging, 
       String? contentVersion, 
@@ -25,6 +29,7 @@ class VolumeInfo {
       String? canonicalVolumeLink,}){
     _title = title;
     _authors = authors;
+    _publisher = publisher;
     _publishedDate = publishedDate;
     _description = description;
     _industryIdentifiers = industryIdentifiers;
@@ -32,6 +37,8 @@ class VolumeInfo {
     _pageCount = pageCount;
     _printType = printType;
     _categories = categories;
+    _averageRating = averageRating;
+    _ratingsCount = ratingsCount;
     _maturityRating = maturityRating;
     _allowAnonLogging = allowAnonLogging;
     _contentVersion = contentVersion;
@@ -46,6 +53,7 @@ class VolumeInfo {
   VolumeInfo.fromJson(dynamic json) {
     _title = json['title'];
     _authors = json['authors'] != null ? json['authors'].cast<String>() : [];
+    _publisher = json['publisher'];
     _publishedDate = json['publishedDate'];
     _description = json['description'];
     if (json['industryIdentifiers'] != null) {
@@ -58,6 +66,8 @@ class VolumeInfo {
     _pageCount = json['pageCount'];
     _printType = json['printType'];
     _categories = json['categories'] != null ? json['categories'].cast<String>() : [];
+    _averageRating = json['averageRating'];
+    _ratingsCount = json['ratingsCount'];
     _maturityRating = json['maturityRating'];
     _allowAnonLogging = json['allowAnonLogging'];
     _contentVersion = json['contentVersion'];
@@ -70,13 +80,16 @@ class VolumeInfo {
   }
   String? _title;
   List<String>? _authors;
+  String? _publisher;
   String? _publishedDate;
   String? _description;
   List<IndustryIdentifiers>? _industryIdentifiers;
   ReadingModes? _readingModes;
-  num? _pageCount;
+  int? _pageCount;
   String? _printType;
   List<String>? _categories;
+  int? _averageRating;
+  int? _ratingsCount;
   String? _maturityRating;
   bool? _allowAnonLogging;
   String? _contentVersion;
@@ -89,18 +102,21 @@ class VolumeInfo {
 
   String? get title => _title;
   List<String>? get authors => _authors;
+  String? get publisher => _publisher;
   String? get publishedDate => _publishedDate;
   String? get description => _description;
   List<IndustryIdentifiers>? get industryIdentifiers => _industryIdentifiers;
   ReadingModes? get readingModes => _readingModes;
-  num? get pageCount => _pageCount;
+  int? get pageCount => _pageCount;
   String? get printType => _printType;
   List<String>? get categories => _categories;
+  int? get averageRating => _averageRating;
+  int? get ratingsCount => _ratingsCount;
   String? get maturityRating => _maturityRating;
   bool? get allowAnonLogging => _allowAnonLogging;
   String? get contentVersion => _contentVersion;
   PanelizationSummary? get panelizationSummary => _panelizationSummary;
-  ImageLinks? get imageLinks => _imageLinks;
+  ImageLinks get imageLinks => _imageLinks!;
   String? get language => _language;
   String? get previewLink => _previewLink;
   String? get infoLink => _infoLink;
@@ -110,6 +126,7 @@ class VolumeInfo {
     final map = <String, dynamic>{};
     map['title'] = _title;
     map['authors'] = _authors;
+    map['publisher'] = _publisher;
     map['publishedDate'] = _publishedDate;
     map['description'] = _description;
     if (_industryIdentifiers != null) {
@@ -121,6 +138,8 @@ class VolumeInfo {
     map['pageCount'] = _pageCount;
     map['printType'] = _printType;
     map['categories'] = _categories;
+    map['averageRating'] = _averageRating;
+    map['ratingsCount'] = _ratingsCount;
     map['maturityRating'] = _maturityRating;
     map['allowAnonLogging'] = _allowAnonLogging;
     map['contentVersion'] = _contentVersion;

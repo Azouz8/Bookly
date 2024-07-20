@@ -9,6 +9,6 @@ class NewestBooksSuccess extends NewestBooksState {
   NewestBooksSuccess(this.books);
 }
 class NewestBooksFailure extends NewestBooksState {
-  String e;
-  NewestBooksFailure(this.e);
+  String errMessage;
+  NewestBooksFailure(this.errMessage);
 }
