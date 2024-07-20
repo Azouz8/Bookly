@@ -1,22 +1,22 @@
 import 'package:bookly/core/utils/assets.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 
 class FeaturedListViewBookItem extends StatelessWidget {
   const FeaturedListViewBookItem({super.key , required this.imgURL});
   final String imgURL;
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1.5 / 2.4,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: Colors.white,
-          image: DecorationImage(
-            image: NetworkImage(imgURL),
-            fit: BoxFit.fill,
-          ),
-        ),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16),
+      child: AspectRatio(
+        aspectRatio: 1.5 / 2.4,
+        child: CachedNetworkImage(
+          imageUrl: imgURL,
+          errorWidget: (context, url, error) => const Icon(Icons.error),
+          fit: BoxFit.fill,
+        )
       ),
     );
   }
