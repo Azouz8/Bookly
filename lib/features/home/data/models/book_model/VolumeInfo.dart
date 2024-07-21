@@ -16,13 +16,13 @@ class VolumeInfo {
       int? pageCount, 
       String? printType, 
       List<String>? categories, 
-      int? averageRating, 
+      num? averageRating,
       int? ratingsCount, 
       String? maturityRating, 
       bool? allowAnonLogging, 
       String? contentVersion, 
       PanelizationSummary? panelizationSummary, 
-      required ImageLinks imageLinks,
+      ImageLinks? imageLinks,
       String? language, 
       String? previewLink, 
       String? infoLink, 
@@ -88,7 +88,7 @@ class VolumeInfo {
   int? _pageCount;
   String? _printType;
   List<String>? _categories;
-  int? _averageRating;
+  num? _averageRating;
   int? _ratingsCount;
   String? _maturityRating;
   bool? _allowAnonLogging;
@@ -110,13 +110,13 @@ class VolumeInfo {
   int? get pageCount => _pageCount;
   String? get printType => _printType;
   List<String>? get categories => _categories;
-  int? get averageRating => _averageRating;
+  num? get averageRating => _averageRating;
   int? get ratingsCount => _ratingsCount;
   String? get maturityRating => _maturityRating;
   bool? get allowAnonLogging => _allowAnonLogging;
   String? get contentVersion => _contentVersion;
   PanelizationSummary? get panelizationSummary => _panelizationSummary;
-  ImageLinks get imageLinks => _imageLinks!;
+  ImageLinks? get imageLinks => _imageLinks;
   String? get language => _language;
   String? get previewLink => _previewLink;
   String? get infoLink => _infoLink;

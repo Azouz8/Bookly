@@ -9,10 +9,7 @@ import 'package:go_router/go_router.dart';
 import 'rating_widget.dart';
 
 class NewestBookListViewItem extends StatelessWidget {
-  const NewestBookListViewItem({
-    super.key,
-    required this.bookModel
-  });
+  const NewestBookListViewItem({super.key, required this.bookModel});
 
   final BookModel bookModel;
 
@@ -31,13 +28,14 @@ class NewestBookListViewItem extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(16),
                 child: AspectRatio(
-                  aspectRatio: 1.7 / 2.4,
-                  child: CachedNetworkImage(
-                    imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
-                    errorWidget: (context, url, error) => const Icon(Icons.error),
-                    fit: BoxFit.fill,
-                  )
-                ),
+                    aspectRatio: 1.7 / 2.4,
+                    child: CachedNetworkImage(
+                      imageUrl:
+                          bookModel.volumeInfo.imageLinks?.thumbnail ?? "",
+                      errorWidget: (context, url, error) =>
+                          const Icon(Icons.error),
+                      fit: BoxFit.fill,
+                    )),
               ),
               const SizedBox(
                 width: 30,
@@ -77,8 +75,8 @@ class NewestBookListViewItem extends StatelessWidget {
                         ),
                         const Spacer(),
                         RatingWidget(
-                          count: bookModel.volumeInfo.ratingsCount?? 0,
-                          rating: bookModel.volumeInfo.averageRating?? 0,
+                          count: bookModel.volumeInfo.ratingsCount ?? 0,
+                          rating: bookModel.volumeInfo.averageRating ?? 0,
                         ),
                       ],
                     ),
