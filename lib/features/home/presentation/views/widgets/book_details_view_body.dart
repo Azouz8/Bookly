@@ -1,3 +1,4 @@
+import 'package:bookly/features/home/data/models/book_model/BookModel.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -6,8 +7,8 @@ import 'book_details_widget.dart';
 import 'might_like_widget.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
-  const BookDetailsViewBody({super.key});
-
+  const BookDetailsViewBody({super.key, required this.bookModel});
+  final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -27,7 +28,7 @@ class BookDetailsViewBody extends StatelessWidget {
               icon: const Icon(Icons.shopping_cart_outlined),
             ),
           ),
-          const BookDetailsWidget(),
+          BookDetailsWidget(bookModel: bookModel,),
           const SizedBox(
             height: 24,
           ),

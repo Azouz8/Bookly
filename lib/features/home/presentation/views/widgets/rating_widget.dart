@@ -24,7 +24,7 @@ class RatingWidget extends StatelessWidget {
         Opacity(
           opacity: 0.5,
           child: Text(
-            "($count)",
+            "( $count )",
             style: Styles.textStyle14SemiBold,
           ),
         ),

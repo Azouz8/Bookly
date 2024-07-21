@@ -1,5 +1,6 @@
 import 'package:bookly/core/widgets/custom_error_widget.dart';
 import 'package:bookly/core/widgets/custom_loading_indicator.dart';
+import 'package:bookly/features/home/data/models/book_model/BookModel.dart';
 import 'package:bookly/features/home/presentation/manager/similar_books_cubit/similar_books_cubit.dart';
 import 'package:bookly/features/home/presentation/manager/similar_books_cubit/similar_books_state.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,6 @@ import 'might_like_list_view_item.dart';
 
 class MightLikeListView extends StatelessWidget {
   const MightLikeListView({super.key});
-
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<SimilarBooksCubit,SimilarBooksState >(
@@ -21,11 +21,11 @@ class MightLikeListView extends StatelessWidget {
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) =>
-              const Padding(
-                padding: EdgeInsets.only(right: 10),
-                child: MightLikeListViewItem(),
+              Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: MightLikeListViewItem(imgURL: state.books[index].volumeInfo.imageLinks!.thumbnail,),
               ),
-              itemCount: 10,
+              itemCount: state.books.length,
             ),
           );
         }
