@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'custom_search_text_field.dart';
+import 'search_result_list_view.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
@@ -32,20 +32,3 @@ class SearchViewBody extends StatelessWidget {
   }
 }
 
-class SearchResultListView extends StatelessWidget {
-  const SearchResultListView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        padding: EdgeInsets.zero,
-        shrinkWrap: true,
-        // itemBuilder: (context, index) => BookListViewItem(),
-        itemBuilder: (context, index) => Container(),
-        itemCount: 10,
-        physics: const BouncingScrollPhysics(),
-      ),
-    );
-  }
-}
