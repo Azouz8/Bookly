@@ -7,13 +7,13 @@ import 'package:dartz/dartz.dart';
 class SearchRepoImpl implements SearchRepo{
   final ApiService apiService;
 
-  SearchRepoImpl({required this.apiService});
+  SearchRepoImpl(this.apiService);
   @override
   Future<Either<Failures, List<BookModel>>> fetchSearchedBooks(String search) async{
     try {
       var data = await apiService.get(
           endPoint:
-          "volumes?q=$search&Filtering=free-ebooks");
+          "volumes?q=Subject:$search&Filtering=free-ebooks");
       List<BookModel> books = [];
       for (var i in data["items"]) {
         books.add(BookModel.fromJson(i));

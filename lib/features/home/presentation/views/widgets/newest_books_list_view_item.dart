@@ -59,7 +59,9 @@ class NewestBookListViewItem extends StatelessWidget {
                       height: 3,
                     ),
                     Text(
-                      bookModel.volumeInfo.authors!.first,
+                      bookModel.volumeInfo.authors?.first ?? "",
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: Styles.textStyle14Normal
                           .copyWith(color: const Color(0xffb6b5bb)),
                     ),

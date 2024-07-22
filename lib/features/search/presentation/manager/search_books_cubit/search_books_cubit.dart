@@ -4,12 +4,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'search_books_state.dart';
 
 class SearchBooksCubit extends Cubit<SearchBooksState> {
-  SearchBooksCubit({required this.searchRepo, required this.search})
+  SearchBooksCubit({required this.searchRepo})
       : super(SearchBooksInitial());
   SearchRepo searchRepo;
-  final String search;
 
-  Future<void> fetchSearchedBooks() async {
+
+  Future<void> fetchSearchedBooks({required String search}) async {
     emit(SearchBooksLoading());
     var result = await searchRepo.fetchSearchedBooks(search);
     result.fold((failure) {
