@@ -19,7 +19,7 @@ class BookDetailsPreviewButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          BuyPreviewButtonSide(
+          const BuyPreviewButtonSide(
             bottomLeft: 16,
             topLeft: 16,
             text: "Free",
