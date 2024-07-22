@@ -15,8 +15,7 @@ class CustomSearchTextField extends StatelessWidget {
         focusedBorder: buildOutlineInputBorder(),
         hintText: "Search",
         suffixIcon: IconButton(
-          icon: const Opacity(opacity: 0.8,
-          child: Icon(FeatherIcons.search)),
+          icon: const Opacity(opacity: 0.8, child: Icon(FeatherIcons.search)),
           onPressed: () {},
         ),
       ),

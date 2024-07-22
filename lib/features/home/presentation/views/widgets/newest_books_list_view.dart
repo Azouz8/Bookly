@@ -18,7 +18,9 @@ class NewestBooksListView extends StatelessWidget {
           return ListView.builder(
             padding: EdgeInsets.zero,
             shrinkWrap: true,
-            itemBuilder: (context, index) => NewestBookListViewItem(bookModel: state.books[index],),
+            itemBuilder: (context, index) => NewestBookListViewItem(
+              bookModel: state.books[index],
+            ),
             itemCount: state.books.length,
             physics: const NeverScrollableScrollPhysics(),
           );

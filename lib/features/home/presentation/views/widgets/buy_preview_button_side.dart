@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/styles.dart';
 
 class BuyPreviewButtonSide extends StatelessWidget {
-  BuyPreviewButtonSide({
+  const BuyPreviewButtonSide({
     super.key,
     this.topRight = 0,
     this.topLeft = 0,
@@ -12,17 +12,19 @@ class BuyPreviewButtonSide extends StatelessWidget {
     required this.text,
     required this.backgroundColor,
     required this.textColor,
+    this.onTap,
   });
 
-  double bottomLeft, bottomRight, topLeft, topRight;
-  String text;
-  Color backgroundColor, textColor;
+  final double bottomLeft, bottomRight, topLeft, topRight;
+  final String text;
+  final Color backgroundColor, textColor;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: InkWell(
-        onTap: () {},
+        onTap: onTap,
         child: Container(
           // width: 140,
           height: 50,

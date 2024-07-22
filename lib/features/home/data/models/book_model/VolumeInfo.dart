@@ -1,4 +1,3 @@
-
 import 'ImageLinks.dart';
 import 'IndustryIdentifiers.dart';
 import 'PanelizationSummary.dart';
@@ -6,27 +5,28 @@ import 'ReadingModes.dart';
 
 class VolumeInfo {
   VolumeInfo({
-      String? title, 
-      List<String>? authors, 
-      String? publisher, 
-      String? publishedDate, 
-      String? description, 
-      List<IndustryIdentifiers>? industryIdentifiers, 
-      ReadingModes? readingModes, 
-      int? pageCount, 
-      String? printType, 
-      List<String>? categories, 
-      num? averageRating,
-      int? ratingsCount, 
-      String? maturityRating, 
-      bool? allowAnonLogging, 
-      String? contentVersion, 
-      PanelizationSummary? panelizationSummary, 
-      ImageLinks? imageLinks,
-      String? language, 
-      String? previewLink, 
-      String? infoLink, 
-      String? canonicalVolumeLink,}){
+    String? title,
+    List<String>? authors,
+    String? publisher,
+    String? publishedDate,
+    String? description,
+    List<IndustryIdentifiers>? industryIdentifiers,
+    ReadingModes? readingModes,
+    int? pageCount,
+    String? printType,
+    List<String>? categories,
+    num? averageRating,
+    int? ratingsCount,
+    String? maturityRating,
+    bool? allowAnonLogging,
+    String? contentVersion,
+    PanelizationSummary? panelizationSummary,
+    ImageLinks? imageLinks,
+    String? language,
+    String? previewLink,
+    String? infoLink,
+    String? canonicalVolumeLink,
+  }) {
     _title = title;
     _authors = authors;
     _publisher = publisher;
@@ -48,7 +48,7 @@ class VolumeInfo {
     _previewLink = previewLink;
     _infoLink = infoLink;
     _canonicalVolumeLink = canonicalVolumeLink;
-}
+  }
 
   VolumeInfo.fromJson(dynamic json) {
     _title = json['title'];
@@ -62,22 +62,30 @@ class VolumeInfo {
         _industryIdentifiers?.add(IndustryIdentifiers.fromJson(v));
       });
     }
-    _readingModes = json['readingModes'] != null ? ReadingModes.fromJson(json['readingModes']) : null;
+    _readingModes = json['readingModes'] != null
+        ? ReadingModes.fromJson(json['readingModes'])
+        : null;
     _pageCount = json['pageCount'];
     _printType = json['printType'];
-    _categories = json['categories'] != null ? json['categories'].cast<String>() : [];
+    _categories =
+        json['categories'] != null ? json['categories'].cast<String>() : [];
     _averageRating = json['averageRating'];
     _ratingsCount = json['ratingsCount'];
     _maturityRating = json['maturityRating'];
     _allowAnonLogging = json['allowAnonLogging'];
     _contentVersion = json['contentVersion'];
-    _panelizationSummary = json['panelizationSummary'] != null ? PanelizationSummary.fromJson(json['panelizationSummary']) : null;
-    _imageLinks = json['imageLinks'] != null ? ImageLinks.fromJson(json['imageLinks']) : null;
+    _panelizationSummary = json['panelizationSummary'] != null
+        ? PanelizationSummary.fromJson(json['panelizationSummary'])
+        : null;
+    _imageLinks = json['imageLinks'] != null
+        ? ImageLinks.fromJson(json['imageLinks'])
+        : null;
     _language = json['language'];
     _previewLink = json['previewLink'];
     _infoLink = json['infoLink'];
     _canonicalVolumeLink = json['canonicalVolumeLink'];
   }
+
   String? _title;
   List<String>? _authors;
   String? _publisher;
@@ -101,25 +109,45 @@ class VolumeInfo {
   String? _canonicalVolumeLink;
 
   String? get title => _title;
+
   List<String>? get authors => _authors;
+
   String? get publisher => _publisher;
+
   String? get publishedDate => _publishedDate;
+
   String? get description => _description;
+
   List<IndustryIdentifiers>? get industryIdentifiers => _industryIdentifiers;
+
   ReadingModes? get readingModes => _readingModes;
+
   int? get pageCount => _pageCount;
+
   String? get printType => _printType;
+
   List<String>? get categories => _categories;
+
   num? get averageRating => _averageRating;
+
   int? get ratingsCount => _ratingsCount;
+
   String? get maturityRating => _maturityRating;
+
   bool? get allowAnonLogging => _allowAnonLogging;
+
   String? get contentVersion => _contentVersion;
+
   PanelizationSummary? get panelizationSummary => _panelizationSummary;
+
   ImageLinks? get imageLinks => _imageLinks;
+
   String? get language => _language;
+
   String? get previewLink => _previewLink;
+
   String? get infoLink => _infoLink;
+
   String? get canonicalVolumeLink => _canonicalVolumeLink;
 
   Map<String, dynamic> toJson() {
@@ -130,7 +158,8 @@ class VolumeInfo {
     map['publishedDate'] = _publishedDate;
     map['description'] = _description;
     if (_industryIdentifiers != null) {
-      map['industryIdentifiers'] = _industryIdentifiers?.map((v) => v.toJson()).toList();
+      map['industryIdentifiers'] =
+          _industryIdentifiers?.map((v) => v.toJson()).toList();
     }
     if (_readingModes != null) {
       map['readingModes'] = _readingModes?.toJson();
@@ -155,5 +184,4 @@ class VolumeInfo {
     map['canonicalVolumeLink'] = _canonicalVolumeLink;
     return map;
   }
-
 }

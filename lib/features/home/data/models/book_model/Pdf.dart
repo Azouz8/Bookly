@@ -1,12 +1,14 @@
 class Pdf {
   Pdf({
-      bool? isAvailable,}){
+    bool? isAvailable,
+  }) {
     _isAvailable = isAvailable;
-}
+  }
 
   Pdf.fromJson(dynamic json) {
     _isAvailable = json['isAvailable'];
   }
+
   bool? _isAvailable;
 
   bool? get isAvailable => _isAvailable;
@@ -16,5 +18,4 @@ class Pdf {
     map['isAvailable'] = _isAvailable;
     return map;
   }
-
 }

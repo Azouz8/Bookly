@@ -1,11 +1,11 @@
 import 'package:bookly/core/utils/styles.dart';
-import 'package:bookly/features/home/data/models/book_model/BookModel.dart';
 import 'package:flutter/material.dart';
 
 import 'might_like_list_view.dart';
 
 class MightLikeWidget extends StatelessWidget {
   const MightLikeWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return const Column(

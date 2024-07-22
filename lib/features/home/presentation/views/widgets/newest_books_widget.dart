@@ -10,7 +10,7 @@ class NewestBooksWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(top: 50 , left: 24,right: 24),
+      padding: EdgeInsets.only(top: 50, left: 24, right: 24),
       child: Column(
         children: [
           Row(
@@ -22,7 +22,9 @@ class NewestBooksWidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 16,),
+          SizedBox(
+            height: 16,
+          ),
           NewestBooksListView(),
         ],
       ),

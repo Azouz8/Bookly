@@ -8,7 +8,9 @@ import 'might_like_widget.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key, required this.bookModel});
+
   final BookModel bookModel;
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -28,7 +30,9 @@ class BookDetailsViewBody extends StatelessWidget {
               icon: const Icon(Icons.shopping_cart_outlined),
             ),
           ),
-          BookDetailsWidget(bookModel: bookModel,),
+          BookDetailsWidget(
+            bookModel: bookModel,
+          ),
           const SizedBox(
             height: 24,
           ),

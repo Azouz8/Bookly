@@ -1,5 +1,6 @@
 import 'package:bookly/features/home/data/repos/home_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'similar_books_state.dart';
 
 class SimilarBooksCubit extends Cubit<SimilarBooksState> {
@@ -10,10 +11,10 @@ class SimilarBooksCubit extends Cubit<SimilarBooksState> {
     emit(SimilarBooksLoading());
     var result = await homeRepo.fetchSimilarBooks(category: category);
     result.fold(
-          (failure) {
+      (failure) {
         emit(SimilarBooksFailure(failure as String));
       },
-          (books) {
+      (books) {
         emit(SimilarBooksSuccess(books));
       },
     );

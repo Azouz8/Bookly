@@ -3,16 +3,17 @@ import 'Pdf.dart';
 
 class AccessInfo {
   AccessInfo({
-      String? country, 
-      String? viewability, 
-      bool? embeddable, 
-      bool? publicDomain, 
-      String? textToSpeechPermission, 
-      Epub? epub, 
-      Pdf? pdf, 
-      String? webReaderLink, 
-      String? accessViewStatus, 
-      bool? quoteSharingAllowed,}){
+    String? country,
+    String? viewability,
+    bool? embeddable,
+    bool? publicDomain,
+    String? textToSpeechPermission,
+    Epub? epub,
+    Pdf? pdf,
+    String? webReaderLink,
+    String? accessViewStatus,
+    bool? quoteSharingAllowed,
+  }) {
     _country = country;
     _viewability = viewability;
     _embeddable = embeddable;
@@ -23,7 +24,7 @@ class AccessInfo {
     _webReaderLink = webReaderLink;
     _accessViewStatus = accessViewStatus;
     _quoteSharingAllowed = quoteSharingAllowed;
-}
+  }
 
   AccessInfo.fromJson(dynamic json) {
     _country = json['country'];
@@ -37,6 +38,7 @@ class AccessInfo {
     _accessViewStatus = json['accessViewStatus'];
     _quoteSharingAllowed = json['quoteSharingAllowed'];
   }
+
   String? _country;
   String? _viewability;
   bool? _embeddable;
@@ -49,14 +51,23 @@ class AccessInfo {
   bool? _quoteSharingAllowed;
 
   String? get country => _country;
+
   String? get viewability => _viewability;
+
   bool? get embeddable => _embeddable;
+
   bool? get publicDomain => _publicDomain;
+
   String? get textToSpeechPermission => _textToSpeechPermission;
+
   Epub? get epub => _epub;
+
   Pdf? get pdf => _pdf;
+
   String? get webReaderLink => _webReaderLink;
+
   String? get accessViewStatus => _accessViewStatus;
+
   bool? get quoteSharingAllowed => _quoteSharingAllowed;
 
   Map<String, dynamic> toJson() {
@@ -77,5 +88,4 @@ class AccessInfo {
     map['quoteSharingAllowed'] = _quoteSharingAllowed;
     return map;
   }
-
 }

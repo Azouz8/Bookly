@@ -4,9 +4,13 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class RatingWidget extends StatelessWidget {
   const RatingWidget({
-    super.key, required this.rating, required this.count,
+    super.key,
+    required this.rating,
+    required this.count,
   });
-  final num rating , count;
+
+  final num rating, count;
+
   @override
   Widget build(BuildContext context) {
     return Row(
