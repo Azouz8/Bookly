@@ -31,7 +31,7 @@ class NewestBookListViewItem extends StatelessWidget {
                     aspectRatio: 1.7 / 2.4,
                     child: CachedNetworkImage(
                       imageUrl:
-                          bookModel.volumeInfo.imageLinks?.thumbnail ?? "",
+                          bookModel.volumeInfo.imageLinks?.thumbnail ?? "https://marketplace.canva.com/EAFmtJTEua8/1/0/1003w/canva-white-and-blue-geometric-business-book-cover-UaW7V8MHJDU.jpg",
                       errorWidget: (context, url, error) =>
                           const Icon(Icons.error),
                       fit: BoxFit.fill,

@@ -22,7 +22,8 @@ class BookDetailsWidget extends StatelessWidget {
             child: AspectRatio(
                 aspectRatio: 1.5 / 2.3,
                 child: CachedNetworkImage(
-                  imageUrl: bookModel.volumeInfo.imageLinks!.thumbnail,
+                  imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ??
+                      "https://marketplace.canva.com/EAFmtJTEua8/1/0/1003w/canva-white-and-blue-geometric-business-book-cover-UaW7V8MHJDU.jpg",
                   errorWidget: (context, url, error) => const Icon(Icons.error),
                   fit: BoxFit.fill,
                 )),
